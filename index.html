@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b5cff">
+  <meta name="description" content="ConceptLab Ghana — learn, explore, practise and master Mathematics, Science, Computing and English.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <title>ConceptLab Ghana</title>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">CL</div>
+    <div>
+      <h1>ConceptLab Ghana</h1>
+      <p>Learn • Explore • Practise • Master</p>
+    </div>
+  </div>
+  <div class="version">Beta 1.1</div>
+</header>
+
+<main id="app">
+  <section class="hero">
+    <div>
+      <span class="eyebrow">A real learning platform</span>
+      <h2>Understand the idea. See it. Try it. Explain it.</h2>
+      <p>ConceptLab combines detailed lessons, practical tasks, interactive simulations, video resources, games, mental drills and assessments so learners do more than memorise answers.</p>
+      <div class="hero-actions">
+        <button class="primary" data-action="start-learning">Start learning</button>
+        <button class="secondary" data-action="open-assessment">Take an assessment</button>
+      </div>
+    </div>
+    <div class="learning-loop">
+      <div>01<br><b>Learn</b></div><div>02<br><b>Explore</b></div><div>03<br><b>Watch</b></div><div>04<br><b>Practise</b></div><div>05<br><b>Challenge</b></div>
+    </div>
+  </section>
+
+  <section id="subjectSection" class="section">
+    <div class="section-heading">
+      <div><span class="eyebrow">Choose a laboratory</span><h2>What do you want to learn?</h2></div>
+      <div class="progress-pill" id="progressPill">0 topics explored</div>
+    </div>
+    <div id="subjects" class="subject-grid"></div>
+  </section>
+
+  <section class="section feature-strip">
+    <article><span>🎥</span><h3>Video lessons</h3><p>Short, focused video resources are attached to topics instead of being added as decoration.</p></article>
+    <article><span>🧪</span><h3>Simulations</h3><p>Change variables, observe results and answer questions. Internal mini-sims work offline.</p></article>
+    <article><span>🧠</span><h3>Active practice</h3><p>Use examples, practical tasks, games and assessments to explain your thinking.</p></article>
+    <article><span>📈</span><h3>Mastery</h3><p>Feedback identifies what was right, what went wrong and what to try next.</p></article>
+  </section>
+
+  <section class="section quick-tools">
+    <div class="section-heading"><div><span class="eyebrow">Practice centre</span><h2>Quick tools</h2></div></div>
+    <div class="tool-grid">
+      <button class="tool-card" data-action="open-games"><span>🎮</span><b>Learning games</b><small>Topic-linked challenges</small></button>
+      <button class="tool-card" data-action="open-assessment"><span>📝</span><b>Assessment</b><small>Mixed tests + mental drill</small></button>
+      <button class="tool-card" data-action="open-video-library"><span>🎬</span><b>Video library</b><small>Curated learning resources</small></button>
+      <button class="tool-card" data-action="open-sim-library"><span>🔬</span><b>Simulation lab</b><small>Explore cause and effect</small></button>
+    </div>
+  </section>
+</main>
+
+<div id="modal" class="modal hidden" aria-hidden="true">
+  <div class="modal-backdrop" data-action="close-modal"></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <div><span id="modalEyebrow" class="eyebrow"></span><h2 id="modalTitle"></h2></div>
+      <button class="icon-button" data-action="close-modal" aria-label="Close">×</button>
+    </div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<footer>
+  <strong>ConceptLab Ghana</strong> • Beta 1.1 • Built for learning, exploration and practical understanding.
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/assessment.js"></script>
+<script src="js/games.js"></script>
+</body>
+</html>
