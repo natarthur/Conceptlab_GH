@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b5cff">
+  <meta name="description" content="ConceptLab Ghana — interactive learning, practice and mastery for Mathematics, Science, Computing and English.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <title>ConceptLab Ghana — Beta 1.1</title>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="brand-mark">CL</div><div><h1>ConceptLab Ghana</h1><p>Learn • Explore • Watch • Practise • Challenge • Master</p></div></div>
+  <div class="version">Beta 1.1</div>
+</header>
+
+<main id="app">
+  <section class="hero">
+    <div>
+      <span class="eyebrow">A deeper learning laboratory</span>
+      <h2>Don't just get the answer. Learn several ways to get there.</h2>
+      <p>Each topic now has multiple explanations, practical examples, worked solutions, progressive practice and challenge work. If one method does not make sense, switch to another immediately.</p>
+      <div class="hero-actions">
+        <button class="primary" data-action="start-learning">Start learning</button>
+        <button class="secondary" data-action="open-assessment">Take an assessment</button>
+      </div>
+    </div>
+    <div class="learning-loop">
+      <div>01<br><b>Learn</b></div><div>02<br><b>Explore</b></div><div>03<br><b>Watch</b></div><div>04<br><b>Practise</b></div><div>05<br><b>Challenge</b></div>
+    </div>
+  </section>
+
+  <section id="subjectSection" class="section">
+    <div class="section-heading"><div><span class="eyebrow">Choose a laboratory</span><h2>What do you want to learn?</h2></div><div class="progress-pill" id="progressPill">0 topics explored</div></div>
+    <div id="subjects" class="subject-grid"></div>
+  </section>
+
+  <section class="section feature-strip">
+    <article><span>🧭</span><h3>Multiple routes</h3><p>Visual, symbolic, practical, verbal and step-by-step approaches help learners change strategy instead of giving up.</p></article>
+    <article><span>🧪</span><h3>Do the work</h3><p>Investigations, simulations, prediction tasks and worked examples turn ideas into things learners can test.</p></article>
+    <article><span>🔥</span><h3>Progressive intensity</h3><p>Move from foundation to guided practice, independent work and high-challenge problems.</p></article>
+    <article><span>📈</span><h3>Feedback & mastery</h3><p>Wrong answers explain the misconception and give a next step instead of simply marking red or green.</p></article>
+  </section>
+
+  <section class="section quick-tools">
+    <div class="section-heading"><div><span class="eyebrow">Practice centre</span><h2>Quick tools</h2></div></div>
+    <div class="tool-grid">
+      <button class="tool-card" data-action="open-games"><span>🎮</span><b>Learning games</b><small>Concept-linked challenges</small></button>
+      <button class="tool-card" data-action="open-assessment"><span>📝</span><b>Assessment</b><small>Questions + explanations</small></button>
+      <button class="tool-card" data-action="open-video-library"><span>📚</span><b>Resource centre</b><small>Curated external learning resources</small></button>
+      <button class="tool-card" data-action="open-sim-library"><span>🔬</span><b>Simulation lab</b><small>Explore cause and effect</small></button>
+    </div>
+  </section>
+</main>
+
+<div id="modal" class="modal hidden" aria-hidden="true">
+  <div class="modal-backdrop" data-action="close-modal"></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head"><div><span id="modalEyebrow" class="eyebrow"></span><h2 id="modalTitle"></h2></div><button class="icon-button" data-action="close-modal" aria-label="Close">×</button></div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<footer><strong>ConceptLab Ghana</strong> • Beta 1.1 • Mathematics • Science • Computing • English</footer>
+
+<script src="js/data.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/simulations.js"></script>
+<script src="js/assessment.js"></script>
+<script src="js/games.js"></script>
+<script src="js/app.js"></script>
+<script>
+  if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(console.warn));
+</script>
+</body>
+</html>
